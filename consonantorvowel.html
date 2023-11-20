@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consonant or Vowel Checker</title>
+</head>
+<body style="background-color: #8d2727;">
+    <h1>Consonant or Vowel Checker</h1>
+    <input type="text" id="letterInput" placeholder="Enter a letter">
+    <button onclick="checkLetter()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkLetter() {
+            const letter = document.getElementById('letterInput').value.toLowerCase();
+            let result = '';
+
+            switch (letter) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    result = letter + ' is a vowel';
+                    break;
+                default:
+                    result = letter + ' is a consonant';
+            }
+
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+</body>
+</html>
